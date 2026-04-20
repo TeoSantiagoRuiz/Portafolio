@@ -54,24 +54,15 @@
             border-color: rgba(139, 92, 246, 0.3);
         }
 
-        /* --- NUEVA ANIMACIÓN PARA LAS LUCES DEL FONDO (HERO) --- */
+        /* Animación para las luces del fondo */
         @keyframes blob-float {
             0% { transform: translate(0px, 0px) scale(1); opacity: 0.5; }
             33% { transform: translate(30px, -50px) scale(1.1); opacity: 0.7; }
             66% { transform: translate(-20px, 30px) scale(0.9); opacity: 0.6; }
             100% { transform: translate(0px, 0px) scale(1); opacity: 0.5; }
         }
-
-        /* Clases de ayuda para la animación */
-        .animate-blob-float {
-            animation: blob-float 15s infinite ease-in-out;
-        }
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-            animation-delay: 4s;
-        }
+        .animate-blob-float { animation: blob-float 15s infinite ease-in-out; }
+        .animation-delay-4000 { animation-delay: 4s; }
     </style>
 </head>
 <body class="antialiased selection:bg-accent selection:text-white">
@@ -79,7 +70,9 @@
     <nav class="fixed w-full z-50 glass transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <a href="#inicio" class="text-2xl font-heading font-bold tracking-tighter">TR<span class="text-primary">.</span></a>
+                <a href="#inicio" class="text-2xl font-heading font-bold tracking-tighter">
+                    TR<span class="text-primary">.</span>
+                </a>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#inicio" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
@@ -95,10 +88,12 @@
     <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob-float opacity-50"></div>
         <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob-float animation-delay-4000 opacity-50"></div>
-        
+
         <div class="max-w-4xl mx-auto text-center px-4 relative z-10">
-            <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-4 tracking-[0.2em]">Técnico Superior en Diseño Digital</h2>
-            <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-tight">
+            <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-4 tracking-[0.2em]">
+                Técnico Superior en Diseño Digital
+            </h2>
+            <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-tight font-heading">
                 TEO <span class="gradient-text">RUIZ</span>
             </h1>
             <p class="text-lg md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
@@ -113,91 +108,93 @@
 
     <section id="proyectos" class="py-24 bg-dark/50 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold mb-16 text-center">Mis <span class="gradient-text">Proyectos</span></h2>
-            
+            <h2 class="text-4xl font-bold mb-16 text-center font-heading">
+                Mis <span class="gradient-text">Proyectos</span>
+            </h2>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <div class="project-card bg-[#151e32] rounded-2xl overflow-hidden border border-white/5 group flex flex-col">
-                    <div class="h-56 bg-gray-800/50 relative overflow-hidden flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-                        <i class="fa-brands fa-instagram text-5xl text-gray-600 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="h-56 relative overflow-hidden bg-gray-800/50">
+                        <img src="img/manzana.png" alt="La Manzana Loca" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold">La Manzana Loca</h3>
+                            <h3 class="text-xl font-bold font-heading">La Manzana Loca</h3>
                             <span class="text-[10px] font-bold uppercase tracking-wider text-red-400 bg-red-400/10 px-2.5 py-1 rounded-md">Content & Web</span>
                         </div>
                         <p class="text-gray-400 text-sm mb-6">Creación de contenido, manejo de cuenta de Instagram y desarrollo de infraestructura e-commerce integral.</p>
-                        <a href="https://www.instagram.com/lamanzanaloca/" target="_blank" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Perfil</a>
+                        <a href="https://www.instagram.com/lamanzanaloca/" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Perfil</a>
                     </div>
                 </div>
 
                 <div class="project-card bg-[#151e32] rounded-2xl overflow-hidden border border-white/5 group flex flex-col">
-                    <div class="h-56 bg-gray-800/50 relative overflow-hidden flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-                        <i class="fa-solid fa-film text-5xl text-gray-600 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="h-56 relative overflow-hidden bg-gray-800/50">
+                        <img src="img/quedate.png" alt="Videoclips Pinto" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold">Videoclips "Pinto"</h3>
+                            <h3 class="text-xl font-bold font-heading">Videoclips "Pinto"</h3>
                             <span class="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded-md">Filmmaking</span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-6">Edición, dirección y toma de fotos/videos para diversos videoclips del artista (ej. "QUÉDAME").</p>
-                        <a href="https://youtu.be/BOYAzQzAi_8?si=KCFHM1nQ59A4NPAA" target="_blank" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver en YouTube</a>
+                        <p class="text-gray-400 text-sm mb-6">Edición, dirección y toma de fotos/videos para diversos videoclips del artista (ej. "QUÉDATE").</p>
+                        <a href="https://youtu.be/B0YAzQzAi_8?si=_NB1ZnZ2m4MBkfc3" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver en YouTube</a>
                     </div>
                 </div>
 
                 <div class="project-card bg-[#151e32] rounded-2xl overflow-hidden border border-white/5 group flex flex-col">
-                    <div class="h-56 bg-gray-800/50 relative overflow-hidden flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-                        <i class="fa-solid fa-play text-5xl text-gray-600 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="h-56 relative overflow-hidden bg-gray-800/50">
+                        <img src="img/ies.png" alt="IES WEEK 2025" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold">IES WEEK 2025</h3>
+                            <h3 class="text-xl font-bold font-heading">IES WEEK 2025</h3>
                             <span class="text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 px-2.5 py-1 rounded-md">Motion Graphics</span>
                         </div>
                         <p class="text-gray-400 text-sm mb-6">Animaciones y motion graphics para el evento en la Estación Belgrano de Santa Fe.</p>
-                        <a href="https://youtube.com/shorts/sTXPEXjyFmA?feature=share" target="_blank" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Animación</a>
+                        <a href="https://youtube.com/shorts/sTXPEXjyFmA?feature=share" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Animación</a>
                     </div>
                 </div>
 
                 <div class="project-card bg-[#151e32] rounded-2xl overflow-hidden border border-white/5 group flex flex-col">
-                    <div class="h-56 bg-gray-800/50 relative overflow-hidden flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-                        <i class="fa-solid fa-pen-nib text-5xl text-gray-600 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="h-56 relative overflow-hidden bg-gray-800/50">
+                        <img src="img/TyG.png" alt="T&G Manual de Marca" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold">T&G Identity</h3>
+                            <h3 class="text-xl font-bold font-heading">T&G Manual de Marca</h3>
                             <span class="text-[10px] font-bold uppercase tracking-wider text-green-400 bg-green-400/10 px-2.5 py-1 rounded-md">Branding</span>
                         </div>
                         <p class="text-gray-400 text-sm mb-6">Creación de logotipo y manual de marca detallado como proyecto final de carrera.</p>
-                        <a href="https://drive.google.com/file/d/1JOcMQUA4KEyCDhQLcFYmv5QgVPokWomt/view?usp=drive_link" target="_blank" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Manual</a>
+                        <a href="https://drive.google.com/file/d/1JOcMQUA4KEyCDhQLcFYmv5QgVPokWOmt/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Manual</a>
                     </div>
                 </div>
 
                 <div class="project-card bg-[#151e32] rounded-2xl overflow-hidden border border-white/5 group flex flex-col">
-                    <div class="h-56 bg-gray-800/50 relative overflow-hidden flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-                        <i class="fa-brands fa-figma text-5xl text-gray-600 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="h-56 relative overflow-hidden bg-gray-800/50">
+                        <img src="img/pagina.png" alt="T&G UX/UI Web" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold">T&G UX/UI Web</h3>
+                            <h3 class="text-xl font-bold font-heading">T&G UX/UI Web</h3>
                             <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-400/10 px-2.5 py-1 rounded-md">UX / UI</span>
                         </div>
                         <p class="text-gray-400 text-sm mb-6">Diseño de interfaz y experiencia de usuario con prototipo funcional en Figma.</p>
-                        <a href="https://www.figma.com/proto/89wnU36LiTEWgOJAcoEZty/Sin-t%C3%ADtulo?node-id=161-1348" target="_blank" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Prototipo</a>
+                        <a href="https://www.figma.com/proto/89wnU36LiTEWgOJAcoEZty/Sin-t%C3%ADtulo?node-id=161-1348" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Prototipo</a>
                     </div>
                 </div>
 
                 <div class="project-card bg-[#151e32] rounded-2xl overflow-hidden border border-white/5 group flex flex-col">
-                    <div class="h-56 bg-gray-800/50 relative overflow-hidden flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-                        <i class="fa-solid fa-camera text-5xl text-gray-600 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="h-56 relative overflow-hidden bg-gray-800/50">
+                        <img src="img/desfile.jpg" alt="Desfile Cambalache" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold">Desfile Cambalache</h3>
+                            <h3 class="text-xl font-bold font-heading">Desfile Cambalache</h3>
                             <span class="text-[10px] font-bold uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2.5 py-1 rounded-md">Fotografía</span>
                         </div>
                         <p class="text-gray-400 text-sm mb-6">Cobertura fotográfica profesional para la edición 2025 del Desfile Cambalache.</p>
-                        <a href="https://drive.google.com/drive/folders/1kEehKVFmQIvJaQI-sJY-WM4_gA0crnLs?usp=drive_link" target="_blank" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Fotos</a>
+                        <a href="https://drive.google.com/drive/folders/1kEehKVFmQIvJaQl-sJY-wM4_gA0crnLs?usp=sharing" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block w-full text-center bg-white/5 hover:bg-white/10 text-white py-2.5 rounded-lg text-sm font-medium transition-colors border border-white/10">Ver Fotos</a>
                     </div>
                 </div>
 
@@ -210,7 +207,9 @@
             <div class="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-3xl p-8 md:p-14 backdrop-blur-sm">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="text-4xl font-bold mb-6">Sobre <span class="gradient-text">Mí</span></h2>
+                        <h2 class="text-4xl font-bold mb-6 font-heading">
+                            Sobre <span class="gradient-text">Mí</span>
+                        </h2>
                         <p class="text-gray-300 mb-6 leading-relaxed text-lg">
                             Soy <strong class="text-white">Teo Ruiz</strong>, Técnico Superior en Diseño Digital egresado del Instituto de Estudios Superiores (I.E.S) de Santa Fe.
                         </p>
@@ -227,15 +226,15 @@
                         </div>
 
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-[#0f172a] rounded-lg text-sm font-medium border border-white/5 text-gray-300">Filmmaking</span>
-                            <span class="px-4 py-2 bg-[#0f172a] rounded-lg text-sm font-medium border border-white/5 text-gray-300">UX/UI Design</span>
-                            <span class="px-4 py-2 bg-[#0f172a] rounded-lg text-sm font-medium border border-white/5 text-gray-300">Motion Graphics</span>
-                            <span class="px-4 py-2 bg-[#0f172a] rounded-lg text-sm font-medium border border-white/5 text-gray-300">Branding</span>
+                            <span class="px-4 py-2 bg-dark rounded-lg border border-white/5 text-sm font-medium text-gray-300">Filmmaking</span>
+                            <span class="px-4 py-2 bg-dark rounded-lg border border-white/5 text-sm font-medium text-gray-300">UX/UI Design</span>
+                            <span class="px-4 py-2 bg-dark rounded-lg border border-white/5 text-sm font-medium text-gray-300">Motion Graphics</span>
+                            <span class="px-4 py-2 bg-dark rounded-lg border border-white/5 text-sm font-medium text-gray-300">Branding</span>
                         </div>
                     </div>
                     <div class="relative group mx-auto w-full max-w-sm">
                         <div class="aspect-[4/5] rounded-2xl bg-gradient-to-tr from-primary/80 to-accent/80 opacity-90 transition-opacity flex items-center justify-center overflow-hidden border border-white/10 shadow-2xl">
-                             <i class="fa-solid fa-user text-8xl text-white/30"></i>
+                            <i class="fa-solid fa-user text-8xl text-white/30"></i>
                         </div>
                     </div>
                 </div>
@@ -246,21 +245,23 @@
     <section id="contacto" class="py-12 border-t border-white/10 bg-dark">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
-                <a href="#inicio" class="text-3xl font-heading font-bold tracking-tighter">TR<span class="text-primary">.</span></a>
-                <p class="text-gray-500 text-sm mt-2">Santa Fe, Argentina</p>
+                <a href="#inicio" class="text-3xl font-bold tracking-tighter font-heading">
+                    TR<span class="text-primary">.</span>
+                </a>
+                <p class="text-gray-500 mt-2 text-sm">Santa Fe, Argentina</p>
             </div>
-            
+
             <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
-                <a href="https://wa.me/543424761722" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 text-green-500 hover:bg-green-500 hover:text-white transition-all text-sm font-medium border border-green-500/20" title="WhatsApp">
+                <a href="https://wa.me/543424761722" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 text-green-500 hover:bg-green-500 hover:text-white transition-all text-sm font-medium border border-green-500/20" title="WhatsApp">
                     <i class="fa-brands fa-whatsapp text-lg"></i> +54 342 4761722
                 </a>
                 <a href="mailto:teosantiagoruiz@hotmail.com" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all" title="Email">
                     <i class="fa-regular fa-envelope text-xl"></i>
                 </a>
-                <a href="https://www.instagram.com/teoruiz_8/" target="_blank" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-white/10 transition-all" title="Instagram">
+                <a href="https://www.instagram.com/teoruiz_8/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-white/10 transition-all" title="Instagram">
                     <i class="fa-brands fa-instagram text-xl"></i>
                 </a>
-                <a href="https://www.youtube.com/@teoruiz19" target="_blank" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-red-500 hover:bg-white/10 transition-all" title="YouTube">
+                <a href="https://www.youtube.com/@teoruiz19" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-red-500 hover:bg-white/10 transition-all" title="YouTube">
                     <i class="fa-brands fa-youtube text-xl"></i>
                 </a>
             </div>
